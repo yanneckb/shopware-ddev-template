@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#ddev-generated
+
+## Description: Run lighthouse and prepare reports
+## Usage: lighthouse 
+## Example: "ddev lighthouse"
+## ExecRaw: true
+# export NODE_TLS_REJECT_UNAUTHORIZED='0'
+
+FOLDER=${1:-'local'}
+FILE=${2:-'lighthouserc.js'}
+
+if [ ! -f ./config/$FOLDER/$FILE ]; then
+  echo "Config file ./config/$FOLDER/$FILE not found"
+  exit 1
+fi
+
+lhci autorun --config=./config/$FOLDER/$FILE --upload.outputDir=./export/$FOLDER

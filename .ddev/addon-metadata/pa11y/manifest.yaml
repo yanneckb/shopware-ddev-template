@@ -1,0 +1,10 @@
+name: pa11y
+repository: Metadrop/ddev-pa11y
+version: v1.2.1
+install_date: "2025-09-17T16:39:52+02:00"
+project_files:
+    - docker-compose.pa11y.yaml
+    - commands
+    - pa11y
+global_files: []
+removal_actions: []

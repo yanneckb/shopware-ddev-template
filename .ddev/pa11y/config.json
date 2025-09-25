@@ -1,0 +1,8 @@
+{
+  "chromeLaunchConfig": {
+    "args": ["--no-sandbox"],
+    "ignoreHTTPSErrors": true
+  },
+  "hideElements": ".skip-pa11y",
+  "ignore": []
+}

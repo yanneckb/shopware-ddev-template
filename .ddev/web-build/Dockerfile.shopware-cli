@@ -1,0 +1,2 @@
+# .ddev/web-build/Dockerfile.shopware-cli
+COPY --from=shopware/shopware-cli:bin /shopware-cli /usr/local/bin/shopware-cli

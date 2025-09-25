@@ -1,0 +1,35 @@
+/.idea
+/vendor/
+
+###> shopware/core ###
+.env.local
+.env.local.php
+.env.*.local
+/public/bundles/*
+/public/media/*
+/public/theme/*
+/public/thumbnail/*
+/public/sitemap/*
+/files/*
+!/files/.htaccess
+/var/*
+!/var/.htaccess
+/auth.json
+/install.lock
+public/asset-manifest.json
+###< shopware/core ###
+
+
+###> root ###
+auth.json
+.history/
+.vscode/
+###< root ###
+
+###> plugins ###
+custom/static-plugins/**/public/administration/**
+custom/static-plugins/**/public/storefront/**
+
+custom/static-plugins/**/dist/administration/**
+custom/static-plugins/**/dist/storefront/**
+###< plugins ###

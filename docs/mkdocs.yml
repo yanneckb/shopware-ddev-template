@@ -1,0 +1,7 @@
+#ddev-generated
+site_name: Shopware DDEV - Documentation
+theme: material
+dev_addr: '0.0.0.0:8000'
+nav:
+  - Home: index.md
+  - DevOps: devOps.md

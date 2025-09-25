@@ -1,0 +1,9 @@
+name: ddev-buggregator
+repository: iljapolanskis/ddev-buggregator
+version: 1.1.1
+install_date: "2025-09-17T16:25:37+02:00"
+project_files:
+    - docker-compose.buggregator.yaml
+    - xhprof/xhprof_prepend.php
+global_files: []
+removal_actions: []

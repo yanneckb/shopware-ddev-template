@@ -1,0 +1,26 @@
+[
+  {
+    "url": "http://shopware-ddev-app.ddev.site/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/yanneck.buelow/reports/export/local/_.report.html",
+    "jsonPath": "/home/yanneck.buelow/reports/export/local/_.report.json",
+    "summary": {
+      "performance": 0.71,
+      "accessibility": 1,
+      "best-practices": 0.78,
+      "seo": 0.58
+    }
+  },
+  {
+    "url": "http://shopware-ddev-app.ddev.site/",
+    "isRepresentativeRun": true,
+    "htmlPath": "/home/yanneck.buelow/reports/export/local/_.report.html",
+    "jsonPath": "/home/yanneck.buelow/reports/export/local/_.report.json",
+    "summary": {
+      "performance": 0.7,
+      "accessibility": 1,
+      "best-practices": 0.78,
+      "seo": 0.58
+    }
+  }
+]
