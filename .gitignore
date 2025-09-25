@@ -28,7 +28,11 @@ auth.json
 
 ###> plugins ###
 custom/plugins/**
+!custom/plugins/.gitignore
+
 custom/apps/**
+!custom/apps/.gitignore
+
 custom/static-plugins/**/public/administration/**
 custom/static-plugins/**/public/storefront/**
 
