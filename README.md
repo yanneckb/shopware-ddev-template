@@ -1,6 +1,6 @@
 # DDEV Shopware Shop
 
-<img src="https://wwww.my-logo-url/logo.png" width="150px" height="150px" style="background: white; border-radius: 100%; object-fit: scale-down;">
+<img src="https://ddev.com/logos/dark-ddev.svg" width="150px" height="150px" style="object-fit: scale-down;">
 
 ## 🧱 Tech Stack
 
