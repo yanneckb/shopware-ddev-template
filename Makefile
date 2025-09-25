@@ -47,10 +47,10 @@ ddev-build:
 	ddev exec shopware-cli project storefront-build
 
 ddev-storefront:
-	shopware-cli project storefront-watch --only-custom-static-extensions
+	ddev exec shopware-cli project storefront-watch --only-custom-static-extensions
 
 ddev-admin:
-	shopware-cli project admin-watch --only-custom-static-extensions
+	ddev exec shopware-cli project admin-watch --only-custom-static-extensions
 
 ddev-start:
 	ddev start
