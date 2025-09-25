@@ -27,6 +27,8 @@ auth.json
 ###< root ###
 
 ###> plugins ###
+custom/plugins/**
+custom/apps/**
 custom/static-plugins/**/public/administration/**
 custom/static-plugins/**/public/storefront/**
 
