@@ -4,4 +4,7 @@ theme: material
 dev_addr: '0.0.0.0:8000'
 nav:
   - Home: index.md
+  - DDEV: ddev.md
+  - DDEV Deep-Dive: ddevDeepDive.md
+  - DDEV Add-Ons: ddevAddOns.md
   - DevOps: devOps.md
