@@ -1,0 +1,104 @@
+/* Buttons */
+
+/* Button-color map */
+$button-colors: (
+  "primary": (
+    bg: $sw-color-brand-primary,
+    border: $sw-color-brand-primary,
+    text: $sw-color-white,
+    hover-bg: $sw-color-brand-secondary,
+    hover-border: $sw-color-brand-secondary,
+    hover-text: $sw-color-white,
+    dark: (
+      bg: $sw-color-white,
+      border: $sw-color-white,
+      text: $sw-color-brand-primary,
+      hover-bg: $sw-color-brand-secondary,
+      hover-border: $sw-color-brand-secondary,
+      hover-text: $sw-color-brand-primary,
+    ),
+  ),
+  "secondary": (
+    bg: transparent,
+    border: $sw-color-brand-primary,
+    text: $sw-color-brand-primary,
+    hover-bg: $sw-color-brand-primary,
+    hover-border: $sw-color-brand-primary,
+    hover-text: $sw-color-white,
+    dark: (
+      bg: transparent,
+      border: $sw-color-white,
+      text: $sw-color-white,
+      hover-bg: $sw-color-white,
+      hover-border: $sw-color-white,
+      hover-text: $sw-color-brand-primary,
+    ),
+  ),
+  "tertiary": (
+    bg: transparent,
+    border: transparent,
+    text: $sw-color-brand-primary,
+    hover-bg: transparent,
+    hover-border: transparent,
+    hover-text: $sw-color-brand-primary,
+    dark: (
+      bg: transparent,
+      border: transparent,
+      text: $sw-color-white,
+      hover-bg: transparent,
+      hover-border: transparent,
+      hover-text: $sw-color-white,
+    ),
+  ),
+);
+
+/* Button-Styles */
+.btn {
+  @each $type, $styles in $button-colors {
+    &.btn-#{$type} {
+      @include btnBase(
+        map-get($styles, bg),
+                map-get($styles, border),
+                map-get($styles, text)
+            );
+      @include btnHover(
+        map-get($styles, hover-bg),
+                map-get($styles, hover-border),
+                map-get($styles, hover-text)
+            );
+
+      &--small {
+        @include btnBase(
+          map-get($styles, bg),
+                    map-get($styles, border),
+                    map-get($styles, text)
+                );
+
+        padding: $button-padding-sm !important;
+      }
+
+      // check for dark button theme
+      $dark-styles: map-get($styles, dark);
+
+      @if $dark-styles {
+        &--dark {
+          @include btnBase(
+            map-get($dark-styles, bg),
+                        map-get($dark-styles, border),
+                        map-get($dark-styles, text)
+                    );
+          @include btnHover(
+            map-get($dark-styles, hover-bg),
+                        map-get($dark-styles, hover-border),
+                        map-get($dark-styles, hover-text)
+                    );
+        }
+      }
+    }
+  }
+}
+
+/* Focus button */
+button:focus:not(:focus-visible) {
+  box-shadow: none;
+}

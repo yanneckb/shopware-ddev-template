@@ -1,0 +1,25 @@
+/*
+Override variable defaults
+==================================================
+This file is used to override default SCSS variables from the Shopware Storefront or Bootstrap.
+
+Because of the !default flags, theme variable overrides have to be declared beforehand.
+https://getbootstrap.com/docs/5.3/customize/sass/#variable-defaults
+*/
+
+body {
+    --bs-body-font-size: rem(16);
+    --bs-body-font-weight: 500;
+    --bs-body-line-height: 150%; 
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+) !default;
+
+$shoptheme: "Shopware6DefaultTheme";

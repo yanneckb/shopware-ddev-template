@@ -1,0 +1,5 @@
+/* Function to generate a color scale based on lightness */
+@function scale-color($base-color, $step) {
+  /* Calculate the lightness of the base color */
+  @return mix(black, $base-color, $step);
+}

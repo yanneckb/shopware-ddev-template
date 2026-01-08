@@ -1,0 +1,4 @@
+url: https://ddev-shopware-6-7-base.ddev.site
+admin_api:
+    username: admin
+    password: shopware

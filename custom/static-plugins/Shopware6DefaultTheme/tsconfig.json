@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es2018",                          // Target ECMAScript version
+    "module": "esnext",                          // Specify module code generation
+    "strict": true,                              // Enable all strict type checking options
+    "esModuleInterop": true,                     // Enable interoperability between CommonJS and ES Modules
+    "forceConsistentCasingInFileNames": true,    // Disallow inconsistent casing in import paths
+    "moduleResolution": "node",                  // Specify module resolution strategy
+    "resolveJsonModule": true,                   // Enable importing .json files
+    "baseUrl": "./",                             // Base directory to resolve non-relative module names
+    "paths": {
+      // Define path aliases for cleaner imports
+      "@app/*": ["src/app/*"],
+      "@config/*": ["src/config/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "outDir": "./dist",                          // Output directory for compiled files
+    "strictNullChecks": true,                    // Enable strict null checks
+    "sourceMap": true,                           // Generate source maps for debugging
+    "declaration": true,                         // Generate declaration files (.d.ts)
+    "noUnusedLocals": true,                      // Raise error on unused local variables
+    "noUnusedParameters": true,                  // Raise error on unused parameters
+    "skipLibCheck": true                         // Skip type checking of declaration files for faster builds
+  },
+  "include": ["src/**/*.ts", "src/Resources/app/storefront/src/global.d.ts", "src/Resources/app/storefront/src/plugin/custom-select/custom-select.js", "src/Resources/app/storefront/src/main.js", "src/Resources/app/storefront/src/main.js"],                    // Specify files to include in compilation
+  "exclude": [
+      "**/build/**",           // Ignored artifacts
+      "**/*.html",             // Ignore all HTML files
+      "package-lock.json",     // Ignore package-lock
+      "**/node_modules/**",    // Commonly ignored directories
+      "**/dist/**",            // Distribution files
+      "**/public/**",          // Publicly accessible files
+      "**/assets/**"           // Asset files
+  ]
+}

@@ -1,0 +1,27 @@
+/* Mixin for button-structure */
+@mixin btnBase($button-bg-color, $button-border-color, $button-text-color) {
+  padding: $button-padding;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: $button-gap;
+  border-radius: $button-border-radius;
+  color: $button-text-color;
+  border: $button-border-width solid $button-border-color;
+  background-color: $button-bg-color;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  line-height: $line-height-large;
+}
+
+/* Mixin for button hover */
+@mixin btnHover(
+  $button-bg-hover-color,
+    $button-border-hover-color,
+    $button-text-hover-color
+) {
+  &:hover {
+    color: $button-text-hover-color;
+    border-color: $button-border-hover-color;
+    background-color: $button-bg-hover-color;
+  }
+}

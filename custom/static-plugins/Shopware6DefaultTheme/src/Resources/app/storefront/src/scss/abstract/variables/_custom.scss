@@ -1,0 +1,73 @@
+/* Basic */
+$border-width-small: rem(1);
+$border-width-normal: rem(2);
+$border-radius-small: rem(4);
+$border-radius-normal: rem(32);
+$border-radius-lg: rem(100);
+$container-width: rem(1440);
+
+/* Spacing Scale */
+$spacing-1: rem(2);
+$spacing-2: rem(4);
+$spacing-3: rem(8);
+$spacing-4: rem(12);
+$spacing-5: rem(16);
+$spacing-6: rem(24);
+$spacing-7: rem(32);
+$spacing-8: rem(40);
+$spacing-9: rem(48);
+
+/* Layout Scale */
+$layout-1: rem(16);
+$layout-2: rem(24);
+$layout-3: rem(32);
+$layout-4: rem(48);
+$layout-5: rem(64);
+$layout-6: rem(96);
+$vertical-section-padding: rem(148);
+
+/* Shadows */
+$shadow-xxs: 0 rem(1) rem(2) 0 rgb(0 0 0 / 5%);
+$shadow-xs: 0 rem(1) rem(3) 0 rgb(0 0 0 / 10%), 0 rem(1) rem(2) 0 rgb(0 0 0 / 6%);
+$shadow-sm: 0 rem(4) rem(8) rem(-2) rgb(0 0 0 / 10%), 0 rem(2) rem(4) rem(-2) rgb(0 0 0 / 6%);
+$shadow-md: 0 rem(12) rem(16) rem(-4) rgb(0 0 0 / 8%), 0 rem(4) rem(6) rem(-2) rgb(0 0 0 / 3%);
+$shadow-l: 0 rem(20) rem(24) rem(-4) rgb(0 0 0 / 8%), 0 rem(8) rem(8) rem(-4) rgb(0 0 0 / 3%);
+$shadow-xl: 0 rem(24) rem(48) rem(-12) rgb(0 0 0 / 18%);
+$shadow-xxl: 0 rem(32) rem(64) rem(-12) rgb(0 0 0 / 14%);
+
+/* Buttons */
+$button-padding: 14px 24px;
+$button-padding-sm: 8px 20px;
+$button-border-radius: $border-radius-small;
+$button-border-width: $border-width-normal;
+$button-gap: 2px;
+
+/* Fonts */
+$aeonik-fono: "AeonikFono";
+$outfit: "Outfit";
+$font-family-headline: $aeonik-fono, "Verdana", sans-serif;
+$font-family-base: $outfit, "Verdana", sans-serif;
+
+$font-weight-black: 900;
+$font-weight-extrabold: 800;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-extralight: 200;
+$font-weight-thin: 100;
+
+$font-style-normal: normal;
+$font-style-italic: italic;
+
+$font-size-xxl: rem(48);
+$font-size-xl: rem(32);
+$font-size-l: rem(24);
+$font-size-md: rem(18);
+$font-size-regular: rem(16);
+$font-size-s: rem(14);
+$font-size-xs: rem(12);
+
+$line-height-regular: 100%;
+$line-height-large: 150%;

@@ -1,0 +1,10 @@
+/* eslint-disable */
+
+build
+**/*.html
+package-lock.json
+node_modules
+dist
+public/administration
+public/storefront
+assets

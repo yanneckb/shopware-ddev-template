@@ -1,0 +1,11 @@
+{% sw_extends '@Storefront/storefront/layout/header.html.twig' %}
+
+{% block header %}
+    {% set stickyHeader = config('Shopware6DefaultTheme.config.stickyHeader') %}
+
+    {% if stickyHeader %}<div class="sticky-header">{% endif %}
+    
+    {{ parent() }}
+    
+    {% if stickyHeader %}</div>{% endif %}
+{% endblock %}

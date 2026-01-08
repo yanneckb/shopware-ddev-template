@@ -1,0 +1,41 @@
+
+/* CSS Reset */
+
+// Reset border styles
+* {
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+}
+// Remove outline on focused interactive elements except for keyboard navigation
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+// Maintain outline for keyboard navigation
+*:focus-visible {
+    outline: auto;
+}
+
+// Prevent excess scrollbar on html/body
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+// Remove default list styles
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Normalize images
+img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,4 @@
+/* Function to use the button map */
+@function get-button-styles($type) {
+  @return map-get($button-colors, $type);
+}

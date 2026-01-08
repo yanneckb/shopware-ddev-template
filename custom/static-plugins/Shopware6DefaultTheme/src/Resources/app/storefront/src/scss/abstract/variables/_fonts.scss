@@ -1,0 +1,102 @@
+/* AeonikFono Regular */
+@font-face {
+    font-family: $aeonik-fono;
+    src: url("#{$app-css-relative-asset-path}/font/AeonikFono/AeonikFono-Regular.woff2")
+      format("woff2"),
+      url("#{$app-css-relative-asset-path}/font/AeonikFono/AeonikFono-Regular.woff")
+      format("woff");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-regular;
+}
+  
+/* AeonikFono Bold */
+@font-face {
+    font-family: $aeonik-fono;
+    src: url("#{$app-css-relative-asset-path}/font/AeonikFono/AeonikFono-Bold.woff2")
+      format("woff2"),
+      url("#{$app-css-relative-asset-path}/font/AeonikFono/AeonikFono-Bold.woff")
+      format("woff");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+}
+
+/* Outfit Thin */
+@font-face {
+    font-family: $outfit;
+    src: url("#{$app-css-relative-asset-path}/font/Outfit/Outfit-Thin.ttf")
+      format("ttf");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-thin;
+}
+
+/* Outfit ExtraLight */
+@font-face {
+    font-family: $outfit;
+    src: url("#{$app-css-relative-asset-path}/font/Outfit/Outfit-ExtraLight.ttf")
+      format("ttf");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-extralight;
+}
+
+/* Outfit Light */
+@font-face {
+    font-family: $outfit;
+    src: url("#{$app-css-relative-asset-path}/font/Outfit/Outfit-Light.ttf")
+      format("ttf");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-light;
+}
+
+/* Outfit Regular */
+@font-face {
+    font-family: $outfit;
+    src: url("#{$app-css-relative-asset-path}/font/Outfit/Outfit-Regular.ttf")
+      format("ttf");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-regular;
+}
+
+/* Outfit Medium */
+@font-face {
+    font-family: $outfit;
+    src: url("#{$app-css-relative-asset-path}/font/Outfit/Outfit-Medium.ttf")
+      format("ttf");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-medium;
+}
+
+/* Outfit SemiBold */
+@font-face {
+    font-family: $outfit;
+    src: url("#{$app-css-relative-asset-path}/font/Outfit/Outfit-SemiBold.ttf")
+      format("ttf");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-semibold;
+}
+
+/* Outfit Bold */
+@font-face {
+    font-family: $outfit;
+    src: url("#{$app-css-relative-asset-path}/font/Outfit/Outfit-Bold.ttf")
+      format("ttf");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+}
+
+/* Outfit ExtraBold */
+@font-face {
+    font-family: $outfit;
+    src: url("#{$app-css-relative-asset-path}/font/Outfit/Outfit-ExtraBold.ttf")
+      format("ttf");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-extrabold;
+}
+
+/* Outfit Black */
+@font-face {
+    font-family: $outfit;
+    src: url("#{$app-css-relative-asset-path}/font/Outfit/Outfit-Black.ttf")
+      format("ttf");
+    font-style: $font-style-normal;
+    font-weight: $font-weight-black;
+}

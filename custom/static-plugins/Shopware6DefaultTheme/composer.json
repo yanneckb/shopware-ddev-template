@@ -1,0 +1,20 @@
+{
+    "name": "brandware/shopware6-default-theme",
+    "description": "Shopware6 Default Theme",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+        "Shopware6DefaultTheme\\": "src/"
+      }
+    },
+    "extra": {
+      "shopware-plugin-class": "Shopware6DefaultTheme\\Shopware6DefaultTheme",
+      "label": {
+        "de-DE": "Shopware6 Default Theme",
+        "en-GB": "Shopware6 Default Theme"
+      }
+    },
+    "version": "1.0.0"
+  }
+  

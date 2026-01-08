@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>Boilerplate Plugin Configuration</title>
+        <title lang="de-DE">Boilerplate Plugin Konfiguration</title>
+        
+        <input-field type="single-select">
+            <name>testSelect</name>
+            <label>Test select</label>
+            <label lang="de-DE">Test Select</label>
+            <helpText>Help me</helpText>
+            <helpText lang="de-DE">Helfen Sie mir</helpText>
+
+            <options>
+                <option>
+                    <id>one</id>
+                    <name>One</name>
+                    <name lang="de-DE">Eins</name>
+                </option>
+                <option>
+                    <id>two</id>
+                    <name>Two</name>
+                    <name lang="de-DE">Zwei</name>
+                </option>
+                <option>
+                    <id>three</id>
+                    <name>Three</name>
+                    <name lang="de-DE">Drei</name>
+                </option>
+            </options>
+        </input-field>
+        <input-field type="checkbox">
+            <name>stickyHeader</name>
+            <label>Sticky Header</label>
+            <label lang="de-DE">Sticky Header</label>
+        </input-field>
+    </card>
+</config>
