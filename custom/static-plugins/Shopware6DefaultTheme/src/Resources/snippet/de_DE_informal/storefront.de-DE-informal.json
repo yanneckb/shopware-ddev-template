@@ -1,0 +1,173 @@
+{
+  "general": {
+    "noscriptNotice": "Um unseren Shop in vollem Umfang nutzen zu können, empfehlen wir dir Javascript in deinem Browser zu aktivieren.",
+    "404ErrorDescription": "Es tut uns leid, die Seite, die du suchst, wurde nicht gefunden. Sie existiert vielleicht nicht mehr oder wurde verschoben.",
+    "maintenanceModeDescription": "Wir aktualisieren derzeit die Inhalte dieser Seite. Bitte schau später wieder vorbei."
+  },
+  "header": {
+    "supportInfo": "<strong>Fragen zu deiner Bestellung?</strong><br /><strong><a href=\"tel:+4912345-123456789\">12345-123456789</a></strong> <small>Täglich 7:30 bis 22:00 Uhr</small>"
+  },
+  "error": {
+    "VIOLATION::NOT_EQUAL_ERROR": "Deine Eingaben sind nicht identisch.",
+    "VIOLATION::FIRST_NAME_IS_BLANK_ERROR": "Bitte trag deinen Vornamen ein.",
+    "VIOLATION::LAST_NAME_IS_BLANK_ERROR": "Bitte trag deinen Nachnamen ein.",
+    "VIOLATION::STREET_IS_BLANK_ERROR": "Bitte trag die Straße deiner Adresse ein.",
+    "VIOLATION::CITY_IS_BLANK_ERROR": "Bitte trag die Stadt deiner Adresse ein.",
+    "VIOLATION::COUNTRY_IS_BLANK_ERROR": "Bitte trag dein Wohnland ein.",
+    "VIOLATION::ADDITIONAL_ADDR1_IS_BLANK_ERROR": "Bitte trag zusätzliche Adressinformationen ein.",
+    "VIOLATION::ADDITIONAL_ADDR2_IS_BLANK_ERROR": "Bitte trag zusätzliche Adressinformationen ein.",
+    "VIOLATION::PHONE_NUMBER_IS_BLANK_ERROR": "Bitte trag deine Telefonnummer ein.",
+    "VIOLATION::PHONE_NUMBER_IS_TOO_LONG": "Eingabe zu lang. Bitte gib eine gültige Telefonnummer ein.",
+    "VIOLATION::FIRST_NAME_IS_TOO_LONG": "Eingabe zu lang. Bitte gib nur deinen Rufnamen oder eine Kurzform davon ein.",
+    "VIOLATION::LAST_NAME_IS_TOO_LONG": "Eingabe zu lang. Bitte gib deinen Namen in abgekürzter Form ein.",
+    "VIOLATION::TITLE_IS_TOO_LONG": "Eingabe zu lang. Bitte gib nur deinen Haupttitel ein oder verwende Abkürzungen.",
+    "VIOLATION::ZIPCODE_IS_TOO_LONG": "Eingabe zu lang. Bitte gib eine gültige Postleitzahl ein.",
+    "VIOLATION::RECAPTCHA_COOKIE_REQUIRED": "Bitte akzeptiere die technisch erforderlichen Cookies, um die reCAPTCHA-Überprüfung zu ermöglichen.",
+    "message-403-ajax": "Die Sitzung ist abgelaufen. Bitte lade die Seite neu und versuche es erneut.",
+    "message-403": "Die Sitzung ist abgelaufen. Bitte kehre zur letzten Seite zurück und versuche es erneut.",
+    "rateLimitExceeded": "Zu viele Anfragen. Bitte warte %seconds% Sekunden, bevor du es erneut versuchst.",
+    "captcha": {
+      "basic-captcha-invalid": "Eingabe ungültig. Bitte versuch es erneut."
+    },
+    "CHECKOUT__CART_HASH_MISMATCH": "Produkte oder Preise in deinem Warenkorb haben sich möglicherweise geändert. Bitte überprüfe den Warenkorb, bevor du die Bestellung aufgibst."
+  },
+  "account": {
+    "externalPaymentCanceled": "Wir haben deine Bestellung erhalten, aber die Zahlung wurde abgebrochen. Bitte ändere deine Zahlungsmethode oder versuche es erneut.",
+    "externalPaymentExpired": "Wir haben deine Bestellung erhalten, aber die Frist für die Zahlungsbestätigung ist abgelaufen. Bitte versuche es erneut.",
+    "externalPaymentFailure": "Wir haben deine Bestellung erhalten, aber wir konnten deine Zahlung nicht bearbeiten, bitte ändere die Zahlungsmethode oder versuche es erneut.",
+    "doubleOptInMailConfirmationSuccessfully": "Vielen Dank für die Bestätigung deiner E-Mail-Adresse! Du kannst deine Bestellung nun abschließen.",
+    "doubleOptInRegistrationSuccessfully": "Vielen Dank für deine Anmeldung! Dein Account wurde erfolgreich freigeschaltet.",
+    "myAccount": "Dein Konto",
+    "loginMailLabel": "Deine E-Mail-Adresse",
+    "loginPasswordLabel": "Dein Passwort",
+    "loginThrottled": "Zu viele Anmeldeversuche. Bitte warte %seconds% Sekunden, bevor du erneut versuchst, dich anzumelden.",
+    "registerAdvantage2": "Speichere deine Daten und Einstellungen.",
+    "registerAdvantage4": "Verwalte dein Newsletter-Abonnement",
+    "registerAddressBillingHeader": "Deine Adresse",
+    "profileText": "Überprüfe deine persönlichen Daten. ",
+    "paymentText": "Hier findest du alle verfügbaren Zahlungsarten und kannst eine Standard-Zahlungsart wählen.",
+    "logoutSucceeded": "Du hast dich erfolgreich abgemeldet.",
+    "overviewInfo": "Hier hast du direkten Zugriff auf deine Profilinformationen, hinterlegte Adressen und die Standard-Zahlungsart.",
+    "overviewNotAbleToShip": "Wir können nicht in das Land liefern, welches in deiner Lieferadresse hinterlegt ist.",
+    "profileCurrentMail": "Deine E-Mail-Adresse",
+    "profileConfirmPassword": "Bitte gib dein aktuelles Passwort ein, um die Änderungen zu bestätigen.",
+    "passwordNotIdentical": "Die von dir eingegebenen Passwörter stimmen nicht überein.",
+    "passwordPoliciesUpdated": "Die Passwortrichtlinien haben sich geändert. Bitte fordere hier ein neues Passwort an.",
+    "passwordHashExpired": "Der Link zum Zurücksetzen des Passworts ist nicht mehr gültig. Bitte fordere einen neuen Link an.",
+    "recoveryMailSend": "Wenn die angegebene E-Mail-Adresse registriert ist, wurde eine Bestätigungs-E-Mail mit einem Link versandt, mit dem du dein Passwort zurücksetzen kannst.",
+    "profileRecoverPasswordInfo": "Wir senden dir eine Bestätigungs-E-Mail. Klicke auf den darin enthaltenen Link, um dein Passwort zu ändern.",
+    "profileDeleteText": "<a href=\"%target%\" data-bs-toggle=\"modal\" data-bs-target=\"%target%\">Klicke hier</a> um alle deine persönlichen Daten zu löschen.",
+    "profileDeleteAlert": "Nach dem Löschen der persönlichen Daten deines Kundenkontos sind Newsletter-Einträge und Bewertungen für dich nicht mehr zugänglich. Beachte jedoch, dass weiterhin Aufzeichnungen über alle Bestellungen gespeichert bleiben, um die gesetzlichen Bestimmungen zu erfüllen.",
+    "profileDeleteConfirm": "Möchtest du dein Kundenkonto wirklich löschen?",
+    "profileDeleteSuccessAlert": "Dein Kundenkonto wurde gelöscht.",
+    "addressText": "Ändere deine Standard-Adressen oder füge neue hinzu.",
+    "inactiveAccountAlert": "Dein Kundenkonto wurde noch nicht aktiviert. Wir haben dir einen Aktivierungslink geschickt. Bitte prüfe dein E-Mail-Postfach, um die Anmeldung abzuschließen!",
+    "doubleOptinAccountAlert": "Dein Kundenkonto wurde noch nicht aktiviert. Wir haben dir einen Aktivierungslink geschickt. Bitte prüfe dein E-Mail-Postfach, um die Anmeldung abzuschließen!",
+    "optInGuestAlert": "Vielen Dank für dein Interesse! Du erhältst in Kürze eine Bestätigungs-E-Mail. Klicke auf den darin enthaltenen Link, um deine E-Mail-Adresse zu bestätigen.",
+    "optInRegistrationAlert": "Vielen Dank für deine Anmeldung! Du erhältst in Kürze eine Bestätigungs-E-Mail. Klicke auf den darin enthaltenen Link, um die Anmeldung abzuschließen.",
+    "optInSuccessAlert": "Sofern die von dir eingegebene E-Mail-Adresse registriert ist, haben wir dir eine Bestätigungs-E-Mail gesendet.",
+    "ordersWelcome": "Deine letzten Bestellungen:",
+    "ordersInfoEmpty": "Du hast noch keine Bestellungen getätigt.",
+    "orderItemCustomerComment": "Dein Kommentar",
+    "editOrderCancelOrderModalBodyText": "Achtung, wenn du die Bestellung stornierst, gehen alle bereits getätigten Zahlungen und alle enthaltenen Rabatte und Aktionen verloren!",
+    "editOrderCancelOrderModalBodyQuestion": "Bist du sicher, dass du die Bestellung unwiderruflich stornieren willst?",
+    "editOrderPaymentNotChangeableWithRefunds": "Diese Bestellung wird bereits bearbeitet oder die Zahlungsmethode ist an einen aktiven Rabatt gebunden. Daher ist es nicht mehr möglich, sie zu verändern. Stattdessen solltest du die Bestellung stornieren und ggf. erneut aufgeben.",
+    "passwordResetTitle": "Hast du dein Passwort vergessen?",
+    "passwordResetInfo": "Wenn du das Passwort für dein Konto vergessen hast, kannst du hier ein neues definieren. Sobald du das neue Passwort speicherst, wird dein altes Passwort ungültig.",
+    "passwordOptInInfo": "Bestätigungs-E-Mail verschickt. Klicke auf den darin enthaltenen Link, um dein Passwort zu ändern.",
+    "orderGuestLoginDescription": "Um deine Bestellung einsehen zu können, gib bitte zuerst deine E-Mail-Adresse sowie die Postleitzahl aus deiner verwendeten Rechnungsadresse ein."
+  },
+  "checkout": {
+    "addressLoginToggle": "Du bist bereits Kunde? Klicke hier, um dich einzuloggen.",
+    "emptyCart": "Dein Warenkorb ist leer.",
+    "cartEmpty": "Dein Warenkorb ist leer.",
+    "confirmRevocationNotice": "Bitte beachte die <a data-ajax-modal=\"true\" data-url=\"%url%\" href=\"%url%\" title=\"Widerrufsbelehrung\">Widerrufsbelehrung</a>.",
+    "confirmRevocationNoticeModal": "Bitte beachte die %revocationModalTagOpen%Widerrufsbelehrung%revocationModalTagClose%.",
+    "confirmRevocationNoticePage": "Bitte beachte die <a href=\"%url%\">Widerrufsbelehrung</a>.",
+    "autoConfirmTermsText": "Mit deiner Bestellung akzeptierst du unsere %tosModalTagOpen%AGB%tosModalTagClose% und die %revocationModalTagOpen%Widerrufsbelehrung%revocationModalTagClose%.",
+    "confirmTermsReminderText": "Du hast bereits die <a data-ajax-modal=\"true\" data-url=\"%url%\" href=\"%url%\" title=\"AGB\">AGB</a> akzeptiert.",
+    "confirmTermsReminderTextModal": "Du hast bereits die %tosModalTagOpen%AGB%tosModalTagClose% akzeptiert.",
+    "confirmRevocationReminder": "Du hast bereits erklärt, dass du auf das Widerrufsrecht verzichtest.",
+    "finishHeader": "Vielen Dank für deine Bestellung bei %shop%!",
+    "finishUpdateHeader": "Vielen Dank für die Aktualisierung deiner Bestellung!",
+    "finishPaymentHeader": "Die Zahlungsart deiner Bestellung wurde zu \"%paymentName%\" geändert!",
+    "finishInfoOrdernumber": "Deine Bestellnummer:",
+    "finishPaymentFailed": "Leider ist der Zahlungsprozess fehlgeschlagen. Bitte ändere die Zahlungsart um deine Bestellung abzuschließen. <a href=\"%editOrderUrl%\">Zahlung ändern</a>",
+    "customerCommentLabel": "Möchtest du uns etwas über deine Bestellung mitteilen?",
+    "customerCommentPlaceholder": "Kommentiere hier ..."
+  },
+  "newsletter": {
+    "info": "Abonniere jetzt einfach unseren regelmäßig erscheinenden Newsletter und du wirst stets als Erster über neue Produkte und Angebote informiert. Der Newsletter ist natürlich jederzeit über einen Link in der E-Mail oder dieser Seite wieder abbestellbar.",
+    "subscriptionPersistedSuccess": "Du hast gerade unseren Newsletter abonniert.\n Um die Registrierung abzuschließen, suche in deiner E-Mail-Box nach unserer Bestätigungsmail und klicke auf den darin enthaltenen Link.",
+    "subscriptionPersistedInfo": "Solltest du in den nächsten Minuten keine Bestätigungs-E-Mail erhalten, bist du eventuell bereits für den Newsletter angemeldet. Durchsuche deinen Posteingang und auch den Spamordner. Versuche danach, dich ein weiteres Mal anzumelden und wende dich an unseren Support, falls auch das nicht funktioniert.",
+    "subscriptionRevokeSuccess": "Du hast dich erfolgreich vom Newsletter abgemeldet.",
+    "subscriptionConfirmationSuccess": "Dein Newsletter-Abonnement wurde erfolgreich registriert.",
+    "subscriptionConfirmationFailed": "Bei deiner Newsletter-Anmeldung ist etwas schiefgelaufen. Bitte wende dich an den Support.",
+    "subscriptionCompleted": "Vielen Dank. Wir haben deine E-Mail-Adresse eingetragen."
+  },
+  "contact": {
+    "info": "Wir freuen uns auf deine Kontaktaufnahme.",
+    "success": "Wir haben deine Kontaktanfrage erhalten und werden sie schnellstmöglich bearbeiten."
+  },
+  "detail": {
+    "reviewFormRatingLabel": "Deine Bewertung",
+    "reviewFormContentLabel": "Deine Erfahrungen",
+    "reviewFormContentPlaceholder": "Teile deine Erfahrungen ...",
+    "reviewFormErrorAlert": "Es ist ein Fehler aufgetreten. Bitte überprüfe, ob alle Felder richtig ausgefüllt wurden.",
+    "reviewFormSuccessAlert": "Vielen Dank für deine Bewertung. Wir werden deine Bewertung prüfen und ggf. freischalten. Bitte hab ein wenig Geduld.",
+    "reviewFormSuccessUpdateAlert": "Vielen Dank für das Bearbeiten deiner Bewertung. Die Bewertung wird wieder sichtbar, sobald wir sie erneut freigeschaltet haben.",
+    "reviewTeaserTitle": "Bewerte dieses Produkt!",
+    "reviewTeaserText": "Teile deine Erfahrungen mit anderen Kunden.",
+    "reviewExistsTeaserTitle": "Du hast dieses Produkt schon bewertet!",
+    "reviewExistsTeaserText": " Willst du deine abgegebene Bewertung bearbeiten?",
+    "reviewListEmpty": "Keine Bewertungen gefunden. Teile deine Erfahrungen mit anderen.",
+    "reviewLoginDescription": "Bewertungen können nur von angemeldeten Benutzern abgegeben werden. Bitte logge dich ein, oder erstelle einen neuen Account.",
+    "reviewLoginSignupLink": "Klicke hier, um dich anzumelden.",
+    "reviewNotPublicYetAlert": "Deine Bewertung wurde noch nicht freigeschaltet",
+    "reviewTitleMinLengthHint": "Bitte gib mindestens 5 Zeichen ein.",
+    "reviewTextMinLengthHint": "Bitte gib mindestens 40 Zeichen ein."
+  },
+  "spatial": {
+    "ar": {
+      "errors": {
+        "desktopNotSupported": {
+          "solution": "Bitte öffne diese Seite auf deinem Mobilgerät, um AR zu starten."
+        },
+        "unknownIOSError": {
+          "solution": "Bitte versuche es erneut oder wende dich an unseren Support."
+        },
+        "unknownARError": {
+          "solution": "Bitte versuche es erneut oder wende dich an unseren Support."
+        }
+      }
+    }
+  },
+  "wishlist": {
+    "cartTitle": "Dein Merkzettel",
+    "headline": "Dein Merkzettel",
+    "itemDeleteSuccess": "Du hast das Produkt erfolgreich von deinem Merkzettel entfernt.",
+    "itemAddedSuccess": "Du hast das Produkt erfolgreich zu deinem Merkzettel hinzugefügt.",
+    "duplicateItemError": "Dieses Produkt befindet sich bereits auf deinem Merkzettel.",
+    "wishlistMergeHint": "Dein Merkzettel kann Produkte enthalten, die bei einem vorhergehenden Besuch hinzugefügt und gespeichert wurden.",
+    "wishlistEmptyHeader": "Dein Merkzettel ist leer",
+    "wishlistEmptyDescription": "Behalte interessante Produkte im Auge, indem du sie zu deinem Merkzettel hinzufügst."
+  },
+  "footer": {
+    "newsletter": "Abonniere jetzt unseren regelmäßig erscheinenden Newsletter, um rechtzeitig über neue Produkte und Angebote informiert zu werden."
+  },
+  "captcha": {
+    "basicCaptchaLabel": "Um weiterzugehen, gib die oben abgebildeten Zeichen ein*"
+  },
+  "cookie": {
+    "wishlist": {
+      "description": "Um die Merkzettel-Funktion nutzen zu können, musst du den \"Merkzettel-Cookie\" akzeptieren oder dich in dein Konto einloggen."
+    }
+  },
+  "component": {
+    "cms": {
+      "vimeo": {
+        "privacyNoticeText": "Mit dem Aufruf des Videos erklärst du dich einverstanden, dass deine Daten an %platform% übermittelt werden und dass du die <a data-ajax-modal=\"true\" data-url=\"%url%\" href=\"%url%\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a> gelesen hast."
+      }
+    }
+  }
+}
