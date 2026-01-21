@@ -5,16 +5,19 @@ import StickyHeaderPlugin from './plugins/header/sticky-header.plugin';
 // Config
 const { PluginManager } = window as any;
 
-// Register imported JS-plugins
+/* Plugin registrations */
 PluginManager.register('CustomSelect', CustomSelectPlugin, 'select.form-select');
 PluginManager.register('StickyHeaderPlugin', StickyHeaderPlugin, '.sticky-header');
 
-// Override imported JS-plugins
-PluginManager.override(
-    'FormCountryStateSelect',
-    () =>
-        import('./plugins/custom-forms/custom-form-country-state-select.plugin'),
-    '[data-form-country-state-select]',
+/* Plugin overrides */
+
+
+/* Plugin extensions */
+PluginManager.extend(
+    'CountryStateSelect',
+    'CountryStateSelect',
+    () => import('./plugin/forms/custom-form-country-state-select.plugin'),
+    '[data-country-state-select]'
 );
 
 /* eslint-enable */
