@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"]
+    },
+    "context7": {
+      "command": "/usr/bin/env",
+      "args": ["bash", ".cursor/run-context7-mcp.sh"]
+    }
+  }
+}

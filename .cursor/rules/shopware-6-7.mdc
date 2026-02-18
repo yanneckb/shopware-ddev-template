@@ -1,0 +1,30 @@
+---
+description: Shopware 6.7 standard – Plugins, themes, storefront, API
+globs: "**/*.php,custom/**/*,**/theme.json,**/composer.json"
+alwaysApply: false
+---
+
+# Shopware 6.7 Standard
+
+## Reference
+- Developer Docs: https://developer.shopware.com/
+- Docs (User/Config): https://docs.shopware.com/en
+- Concepts: Commerce (Catalog, Checkout, Content), Framework (DAL, Messaging, Migrations, Rules, HTTP Cache, Elasticsearch, Flow), Extensions (Apps, Plugins), API (Store API, Admin API).
+
+## Plugins
+- PHP 8.3, `declare(strict_types=1);`, PSR-4, namespace = plugin name (e.g. `MyPlugin\`).
+- `composer.json`: `shopware-platform-plugin`, `extra.shopware-plugin-class`, `extra.label` (de-DE, en-GB).
+- Lifecycle: Install/Activate/Update/Deactivate; services via DI, events/subscribers, migrations for schema.
+- No core modifications without plugin/extension; use Store API/Admin API for extensions.
+
+## Themes
+- Theme = plugin implementing `ThemeInterface`; `theme.json`: `name`, `views`, `style`, `script`, `asset`, `configInheritance`, `config` (fields).
+- Respect view order: e.g. `@Storefront`, `@Plugins`, `@YourCustom`, `@YourBaseTheme`.
+- SCSS/JS in theme plugin; build via e.g. `shopware-cli project storefront-build` or `storefront-watch`.
+
+## Storefront
+- Twig, SCSS, JS (Webpack); extend via custom controllers, subscribers, page/pagelet.
+- Official guides: Customize Templates, Add Custom Controller, Add Custom Styling, CMS Blocks/Elements, Add Custom Fields.
+
+## API
+- Store API (storefront/customers), Admin API (administration); for custom frontends: https://developer.shopware.com/frontends/.

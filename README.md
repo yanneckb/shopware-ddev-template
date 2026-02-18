@@ -1,90 +1,80 @@
-# DDEV Shopware Shop
+# DDEV Shopware 6.7 Base
 
-<img src="https://ddev.com/logos/dark-ddev.svg" width="150px" height="150px" style="object-fit: scale-down;">
+Base setup for Shopware 6.7 with DDEV. Use as a template for different projects.
 
-## 🧱 Tech Stack
-
-- Shopware 6.7.5.1
-- PHP 8.4
-- Node 22
-- MySQL 8.0
-- ddev
-
-## 🔧 Requirements
+## Requirements
 
 - [Docker](https://docs.docker.com/get-docker/)
-- [DDEV](https://ddev.readthedocs.io/en/latest/#installation) or [devenv](https://developer.shopware.com/docs/guides/installation/devenv.html)
+- [DDEV](https://ddev.readthedocs.io/en/latest/#installation)
 
----
+## Setup
 
-## 🏗️ Setup (ddev)
+1. **Start project:** Run `make ddev-setup`. Ensure `install.lock` exists in the project root (created by setup or after a manual install).
+2. **Database (optional):** Import a dump (see [Database](#database)), then set sales channel domains to `https://<project>.ddev.site` and `http://<project>.ddev.site`.
 
-👉 [Documentation how to set up a shopware project with ddev](https://brandung.atlassian.net/wiki/x/AgBb3AQ)
+### DDEV commands
 
-Clone the project
+| Action                      | Command                 |
+| --------------------------- | ----------------------- |
+| Start project               | `ddev start`            |
+| Ports & status              | `ddev describe`         |
+| Shell                       | `ddev ssh`              |
+| Storefront watch            | `make ddev-storefront`  |
+| Admin watch                 | `make ddev-admin`       |
+| Build (Storefront + Admin)  | `make ddev-build`       |
 
-```bash
-git clone git@gitlab.brandung.de:ddev-shopware-shop.git
-```
+### Image proxy (optional)
 
-Go to the project directory
+To load assets from an external source (e.g. S3), run `make ddev-image-proxy` in a separate terminal alongside your running DDEV project. Do not commit `config/packages/zzz-sw-cli-image-proxy.yml`; it may affect production.
 
-```bash
-cd ddev-shopware-shop
-```
+### Database
 
-Run initial setup
-```bash
-make ddev-init
-```
-
-Alternative run project setup (or if errors occur)
-
-```bash
-make ddev-setup
-```
-
-## 🗂️ Database
-
-Import database for local environment
+Dumps can be stored in `./.devOps/db/*.sql.gz`. The import command expects `./db.sql` by default; override with `database=<path>`, e.g.:
 
 ```bash
-make ddev-import-db
+make ddev-import-db database=./.devOps/db/your-dump.sql.gz
 ```
 
-The database is located in `./.devOps/db/*.sql`
+If you do not import a dump, `install.lock` must exist so the Shopware installation assistant does not run.
 
-### 💻 Commands (ddev)
+### Cursor (IDE rules & MCP)
 
-| Operation          | Command                  |
-| ------------------ | ------------------------ |
-| Start project      | ```ddev start```         |
-| Open ddev shell    | ```dev ssh```            |
-| Watch storefront   | ```make ddev-watch```    |
-| Build storefront   | ```make ddev-build```    |
+The project includes **Cursor rules** (`.cursor/rules/*.mdc`) for consistent AI assistance (Shopware 6.7, theme/storefront, PHP plugins, DDEV). MCP is configured with **Context7** for up-to-date Shopware documentation.
 
-### 🛫 Start project
+- Add your **Context7 API key** to `.env.local`: `CONTEXT7_API_KEY=your_key` (get a free key at [context7.com/dashboard](https://context7.com/dashboard)). Do not commit the key.
+- Verify: `make check-context7` (should print "OK: CONTEXT7_API_KEY is set").
+- Details on rules, MCP, and scripts: [.cursor/README.md](.cursor/README.md).
 
-- run `ddev start && ddev ssh` to access the container
-- on the first start you may need to change the domains in the main sales channel to `https://ddev-shopware-shop.ddev.site/` and `http://ddev-shopware-shop.ddev.site/`
+## Deployment
 
----
+```mermaid
+%%{init: {'theme':'neutral', 'themeVariables': {'primaryColor':'#e8e8e8','primaryBorderColor':'#b0b0b0','lineColor':'#888'}, 'gitGraph': {'diagramPadding':4, 'titleTopMargin':8}} }%%
+gitGraph
+  commit id: "main"
+  branch develop
+  branch release
+  branch feature
+  checkout feature
+  commit id: "work"
+  checkout develop
+  merge feature tag: "merge when done"
+  checkout release
+  merge feature tag: "after approval"
+  checkout main
+  merge release tag: "tag"
+  commit id: "Production"
+  branch hotfix
+  commit id: "fix"
+  checkout main
+  merge hotfix
+  checkout develop
+  merge hotfix
+```
 
-## 🚀 Deployment
+- **develop/staging** and **release** branch from **main**.
+- **feature** branches from **main**; merge into **develop/staging** when done.
+- After approval, merge **feature** into **release**.
+- When **release** is ready, merge into **main** and create a **tag**.
+- **Hotfixes** branch from **main** and merge into **develop** and **main**.
 
-[Our deployment process](https://link-to-deployment-process)
-
-- create **develop/staging** branch from **main** branch
-- create **release** branch from **main** branch
-- create **feature** branch from **main** branch
-- merge **feature** into **develop/staging** branch if finished
-- when approved merge **feature** branch into **release** branch
-- if **release** branch is ready merge into **main** branch and create a new **tag**
-- **hotfixes are created from **main** and merged into **develop** and **main** branch
-
-For finished features, a draft merge request is created for the current release. After acceptance, the draft marker is removed
-
-Develop is a release branch for testing on Dev/Stage and should be considered independently of Main. 
-Can be overwritten by Main at any time after consultation.
-
-Feature branches are only closed/deleted once they have been deployed to Prod.
+Close or delete feature branches only after they have been deployed to production.

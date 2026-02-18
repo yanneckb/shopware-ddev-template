@@ -2,7 +2,9 @@
     "name": "shopware/production",
     "license": "MIT",
     "type": "project",
+    "version": "1.0.0",
     "require": {
+        "php": "^8.4",
         "composer-runtime-api": "^2.0",
         "brandware/shopware6-default-theme": "*",
         "frosh/frosh-platform-template-mail": "^3.0",
@@ -11,7 +13,7 @@
         "frosh/platform-thumbnail-processor": "^5.4",
         "frosh/tools": "^3.2",
         "shopware/administration": "*",
-        "shopware/core": "v6.7.5.1",
+        "shopware/core": "~6.7",
         "shopware/elasticsearch": "*",
         "shopware/storefront": "*",
         "swag/paypal": "10.4.1",
@@ -77,6 +79,8 @@
         }
     },
     "require-dev": {
-        "frosh/development-helper": "^3.0"
+        "frosh/development-helper": "^3.0",
+        "symfony/stopwatch": "^7.2",
+        "symfony/web-profiler-bundle": "^7.2"
     }
 }

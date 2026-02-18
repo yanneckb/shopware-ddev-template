@@ -43,8 +43,8 @@ ddev-theme:
 	ddev exec console theme:change --all ${theme}
 
 ddev-build:
-	ddev exec shopware-cli project admin-build
-	ddev exec shopware-cli project storefront-build
+	ddev exec shopware-cli project admin-build --force-install-dependencies
+	ddev exec shopware-cli project storefront-build --force-install-dependencies
 
 ddev-storefront:
 	ddev exec shopware-cli project storefront-watch --only-custom-static-extensions
@@ -55,14 +55,14 @@ ddev-admin:
 ddev-start:
 	ddev start
 	make ddev-storefront
-	
+
 ddev-stop:
 	ddev stop --stop-servers
 
+### Project commands ###
 ddev-image-proxy:
-	ddev exec shopware-cli project image-proxy --url http://my-shop.ddev.site --external-url https://www.my-shop.com/ 
+	ddev exec shopware-cli project image-proxy --url http://your-shop.ddev.site --external-url https://your-shop.live.com/
 
-### DDEV setup commands ###
 ddev-update-project:
 	ddev exec rm -rf composer.lock
 	ddev exec composer update
@@ -72,28 +72,7 @@ ddev-update-project:
 	make ddev-cache
 	@echo 'Project update finished!'
 
-ddev-config:
-	ddev config --project-type=shopware6 --docroot=public --php-version=${phpVersion} --database=${dbConfig} --nodejs-version=${nodejs} --webserver-type=nginx-fpm --performance-mode=none
-
-# Create new DDEV project
-ddev-create-project:
-	make ddev-config
-	ddev composer create-project shopware/production
-	make ddev-init
-
-# Integrate DDEV to existing project
-ddev-setup-existing-project:
-	make ddev-config
-	make ddev-init
-
-# Initialize project with new ENV-file and shopware-cli
-ddev-init:
-	echo "APP_SECRET=$$(openssl rand -hex 16)" > .env.ddev
-	make ddev-setup -k
-
-# Setup configured DDEV project
 ddev-setup:
-	echo "COPY --from=shopware/shopware-cli:bin /shopware-cli /usr/local/bin/shopware-cli" > .ddev/web-build/Dockerfile.shopware-cli
 	cp .env.ddev .env.local
 	ddev start
 	make ddev-composer
@@ -105,15 +84,20 @@ ddev-setup:
 	ddev launch /admin
 	@echo 'ddev setup finished! You may want to run make ddev-import-db next!'
 
-# Exprot database
+### Database commands ###
+# Export database
 ddev-export-db:
-    ddev export-db --file=.devOps/db/${database}
+    ddev export-db --file=./.devOps/db/dump.sql.gz
 
 # Import database
 ddev-import-db:
-	ddev import-db --file=.devOps/db/${database}
+	ddev import-db --file=./.devOps/db/${database}
 	ddev exec bin/console database:migrate --all
 	ddev exec bin/console database:migrate-destructive --all
 	ddev exec bin/console cache:clear
 	ddev exec bin/console dal:refresh:index
 	ddev exec bin/build-js.sh
+
+### Cursor commands ###
+check-context7:
+	@(cd "$(dir $(abspath $(firstword $(MAKEFILE_LIST))))" && bash .cursor/run-context7-mcp.sh --check)

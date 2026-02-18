@@ -1,32 +1,68 @@
-/.idea
-/vendor/
+# IDE / Editor
+**/.idea/*
+**/.vscode/*
 
+# Dependencies
+/vendor/*
+/node_modules/*
+!/package-lock.json
+
+# Shopware core
 ###> shopware/core ###
 .env.local
 .env.local.php
 .env.*.local
+
+/config/jwt/*
+/config/packages/shopware.yaml
+/config/packages/zzz-sw-cli-image-proxy.yml
+
 /public/bundles/*
 /public/media/*
 /public/theme/*
 /public/thumbnail/*
 /public/sitemap/*
+/public/asset-manifest.json
+
+/public/*.*
+/public/*/*
+!/public/bikesoap/*
+!/public/pressureprof/*
+!/public/robots.txt
+!/public/index.php
+!/public/maintenance.html
+!/public/.htaccess.dist
+
 /files/*
 !/files/.htaccess
+
 /var/*
 !/var/.htaccess
-/auth.json
-/install.lock
-/public/asset-manifest.json
+!/auth.json
+!/install.lock
 ###< shopware/core ###
 
-###< custom ###
-config/packages/zzz-sw-cli-image-proxy.yml
-###< custom ###
-
+# Plugins
 ###> plugins ###
+/custom/*.*
+/custom/*/*
+!/custom/static-plugins/*
+!/custom/plugins/.gitignore
+!/custom/apps/.gitignore
+
 custom/static-plugins/**/public/administration/**
 custom/static-plugins/**/public/storefront/**
-
-custom/static-plugins/**/dist/**
-node_modules/
+custom/static-plugins/**/public/static/**
+custom/static-plugins/**/dist/administration/**
+custom/static-plugins/**/dist/storefront/**
+custom/static-plugins/**/dist/static/**
 ###< plugins ###
+
+# Keep in repo
+!.htaccess
+!.gitkeep
+!.keep
+
+# System / misc
+.DS_Store
+.!*

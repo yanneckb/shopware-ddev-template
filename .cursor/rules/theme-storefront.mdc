@@ -1,0 +1,22 @@
+---
+description: Theme & storefront – Views, SCSS, JS, BEM
+globs: "**/storefront/**/*,**/theme.json,**/*.twig,**/*.scss,custom/static-plugins/**/*"
+alwaysApply: false
+---
+
+# Theme & Storefront
+
+## Theme structure
+- Theme = plugin with `ThemeInterface`; class e.g. `YourBaseTheme\YourBaseTheme`.
+- `theme.json`: `views` e.g. `@Storefront`, `@Plugins`, `@YourCustom`, `@YourBaseTheme`; styles/scripts inherit from Storefront or custom theme.
+- Assets: e.g. `app/storefront/src/scss/`, `app/storefront/dist/`; config fields for colors (e.g. `sw-color-brand-primary`).
+
+## Quality (recommendations)
+- **ESLint** (e.g. Airbnb-based), **Stylelint** (BEM, limited nesting, consistent indentation), **Prettier** (quotes, tabs, trailing commas, semicolons).
+- Lint-staged: Prettier + ESLint for JS/TS, Prettier + Stylelint for SCSS.
+- TypeScript: strict settings; path aliases e.g. `@app/*`, `@config/*`, `@utils/*` as needed.
+
+## Storefront customizations
+- Twig: Override only what is needed; keep view order.
+- SCSS: BEM, flat nesting; use theme variables.
+- JS: Bundle in theme plugin; no global side effects unless necessary.

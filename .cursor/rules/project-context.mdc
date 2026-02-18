@@ -1,0 +1,39 @@
+---
+description: Shopware 6.7 DDEV – Project context, DDEV, documentation, conventions
+alwaysApply: true
+---
+
+# Shopware 6.7 DDEV – Project Context (Template)
+
+## Project
+- **Base:** Shopware 6.7 e-commerce (this repo as a template for different projects).
+- **Shopware version:** 6.7. Use official docs as reference.
+
+## Development environment
+- Use **DDEV** (do not assume local PHP/Composer outside DDEV).
+- Common commands: `ddev start`, `ddev ssh`, `make ddev-storefront`, `make ddev-admin`, `make ddev-build`, `make ddev-cache`, `make ddev-import-db`, `make ddev-plugins`, `make ddev-theme`.
+- Storefront URL per project: `https://<projectname>.ddev.site` (DDEV project name in `.ddev/config.yaml`).
+
+## Documentation (always check)
+- **Developer:** https://developer.shopware.com/
+- **User/Docs:** https://docs.shopware.com/en
+- **Frontends (Headless/Custom Storefronts):** https://developer.shopware.com/frontends/
+- LLM-optimized docs: https://developer.shopware.com/llms.txt
+
+## Context7 MCP (up-to-date docs)
+- **Setup:** Add `CONTEXT7_API_KEY=your_key` to `.env.local` (gitignored) or `.env.ddev`; get a free key at [context7.com/dashboard](https://context7.com/dashboard). `.cursor/run-context7-mcp.sh` sources it so the key is not in mcp.json.
+- **Verify:** From project root run `bash .cursor/run-context7-mcp.sh --check` — should print "OK: CONTEXT7_API_KEY is set". In Cursor: Settings → MCP → ensure "context7" is connected; in chat try e.g. "How do I add a CMS block in Shopware? use context7".
+- Use in prompts: `use context7` or target a library: `use library /shopware/docs` (IDs below).
+- **Shopware library IDs (Context7):**
+  - `/shopware/shopware` – Shopware 6 platform (GitHub)
+  - `/websites/shopware_en` – Shopware docs (docs.shopware.com/en)
+  - `/shopware/docs` – Developer documentation
+  - `/shopware/store-api-reference` – Store API reference
+  - `/shopware/frontends` – Shopware Frontends (Vue/custom storefronts)
+  - `/shopware/administration` – Administration (JS/Vue)
+  - `/shopware/meteor` – Meteor design system
+
+## Code & conventions
+- Best practices, lean code. No unnecessary abstractions.
+- Prefer existing dependencies; new ones only after discussion.
+- Never hardcode credentials, tokens, or environment-specific values.

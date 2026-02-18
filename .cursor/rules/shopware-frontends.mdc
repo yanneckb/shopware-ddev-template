@@ -1,0 +1,19 @@
+---
+description: Shopware Frontends (headless/custom storefronts) – Reference
+globs: "**/frontends/**/*,**/*nuxt*,**/*storefront*config*"
+alwaysApply: false
+---
+
+# Shopware Frontends (Headless)
+
+## When relevant
+- Only for **custom storefronts** (e.g. Vue/Nuxt, React, Astro) instead of the classic Shopware storefront.
+- Reference: https://developer.shopware.com/frontends/
+
+## Concepts
+- **Composable Frontends:** platform-agnostic custom storefronts; demo with Vue.js/Nuxt 3.
+- Store API for products, cart, checkout, CMS; composables (e.g. useCart, useProduct, useCheckout).
+- Templates: Vue Starter, Blank, Demo Store, Custom Vue/React/Astro.
+
+## Template / your project
+- Default is the **classic storefront** (Twig/SCSS/JS in theme plugin). Use Frontends docs only when a headless frontend is planned or present.

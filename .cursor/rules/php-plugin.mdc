@@ -1,0 +1,21 @@
+---
+description: PHP and plugin conventions – Namespaces, services, commands
+globs: "**/src/**/*.php,custom/**/*.php"
+alwaysApply: false
+---
+
+# PHP & Plugin Conventions
+
+## General
+- PHP 8.3; `declare(strict_types=1);` in every PHP file.
+- Typed properties and return types; no untyped structures (no equivalent to `any`).
+
+## Plugins (Shopware)
+- Namespace = plugin name (e.g. `MyPlugin\`, `MyBaseTheme\`).
+- Services in `Resources/config/services.xml`; dependency injection, no static helpers for testable logic.
+- CLI: `bin/console` (with DDEV: `ddev exec bin/console`); register commands as services.
+- Migrations for DB changes; no manual SQL scripts in the repo.
+
+## Code style
+- Follow project code style (ECS/PHPStan); run checks before commit.
+- Keep functions short and readable; move logic into services.
