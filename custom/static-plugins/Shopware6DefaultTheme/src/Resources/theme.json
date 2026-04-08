@@ -261,7 +261,7 @@
                 "de-DE": "Wird bei Ansichten über 991px angezeigt und als Alternative bei kleineren Auflösungen, für die kein anderes Logo eingestellt ist."
             },
             "type": "media",
-            "value": "app/storefront/src/assets/logo/brandung-logo.svg",
+            "value": "app/storefront/src/assets/logo/logo.svg",
             "editable": true,
             "block": "media",
             "order": 100,
@@ -277,7 +277,7 @@
                 "de-DE": "Wird zwischen einem viewport von 767px bis 991px angezeigt"
             },
             "type": "media",
-            "value": "app/storefront/src/assets/logo/brandung-logo.svg",
+            "value": "app/storefront/src/assets/logo/logo.svg",
             "editable": true,
             "block": "media",
             "order": 200,
@@ -293,7 +293,7 @@
                 "de-DE": "Wird bis zu einem Viewport von 767px angezeigt"
             },
             "type": "media",
-            "value": "app/storefront/src/assets/logo/brandung-logo.svg",
+            "value": "app/storefront/src/assets/logo/logo.svg",
             "editable": true,
             "block": "media",
             "order": 300,

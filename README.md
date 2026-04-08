@@ -45,7 +45,38 @@ The project includes **Cursor rules** (`.cursor/rules/*.mdc`) for consistent AI 
 - Verify: `make check-context7` (should print "OK: CONTEXT7_API_KEY is set").
 - Details on rules, MCP, and scripts: [.cursor/README.md](.cursor/README.md).
 
-## Deployment
+1. Run `make ddev-setup`. Ensure `install.lock` exists in the project root (created by setup or after a manual install).
+2. If you have a database dump: import it (see Database), then set sales channel domains to `https://schwalbe-shop-sde.ddev.site` and `http://schwalbe-shop-sde.ddev.site`.
+
+### DDEV commands
+
+| Action                      | Command                 |
+| --------------------------- | ----------------------- |
+| Start project               | `ddev start`            |
+| Ports and status            | `ddev describe`         |
+| Shell                       | `ddev ssh`              |
+| Storefront watch            | `make ddev-storefront`  |
+| Admin watch                 | `make ddev-admin`       |
+| Build (storefront + admin)  | `make ddev-build`       |
+
+#### Local Developer Documentation
+
+The local developer documentation is available on `http://schwalbe-shop-sde.ddev.site:9004` and can be edited inside the `./docs` folder.
+(See [DDEV MkDocs](https://github.com/Metadrop/ddev-mkdocs?tab=readme-ov-file))
+
+#### Image proxy
+
+To load assets from the S3 bucket, run `make ddev-image-proxy` in a separate terminal alongside your running DDEV project. Do not commit `config/packages/zzz-sw-cli-image-proxy.yml`; it would affect production.
+
+### Database
+
+Dumps are stored in `./.devOps/db/*.sql.gz`. The import command expects `./db.sql` by default; use `database=<path>` to override (e.g. `make ddev-import-db database=./.devOps/db/your-dump.sql.gz`). If you do not import a dump, `install.lock` must exist so the Shopware installation assistant does not run.
+
+```bash
+make ddev-import-db
+```
+
+## Deployment & workflow
 
 ```mermaid
 %%{init: {'theme':'neutral', 'themeVariables': {'primaryColor':'#e8e8e8','primaryBorderColor':'#b0b0b0','lineColor':'#888'}, 'gitGraph': {'diagramPadding':4, 'titleTopMargin':8}} }%%
@@ -78,3 +109,4 @@ gitGraph
 - **Hotfixes** branch from **main** and merge into **develop** and **main**.
 
 Close or delete feature branches only after they have been deployed to production.
+

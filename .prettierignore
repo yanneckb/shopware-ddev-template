@@ -1,0 +1,9 @@
+node_modules
+**/node_modules/**
+**/dist/**
+**/build/**
+**/public/**
+**/assets/**
+package-lock.json
+**/*.min.js
+**/*.min.css

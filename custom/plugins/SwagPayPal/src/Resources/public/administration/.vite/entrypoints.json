@@ -3,14 +3,14 @@
   "entryPoints": {
     "swag-pay-pal": {
       "css": [
-        "/bundles/swagpaypal/administration/assets/swag-pay-pal-Bl65a9xJ.css"
+        "/bundles/swagpaypal/administration/assets/swag-pay-pal-CM_P7Pfy.css"
       ],
       "dynamic": [
         "/bundles/swagpaypal/administration/assets/index-BziGdwzm.js",
-        "/bundles/swagpaypal/administration/assets/index-82QMdBWK.js",
+        "/bundles/swagpaypal/administration/assets/index-CVbqATXD.js",
         "/bundles/swagpaypal/administration/assets/index-DVkGKjlB.js",
-        "/bundles/swagpaypal/administration/assets/index-DxLTd4xV.js",
-        "/bundles/swagpaypal/administration/assets/index-R7pIpB7B.js",
+        "/bundles/swagpaypal/administration/assets/index-Cs3eJv5B.js",
+        "/bundles/swagpaypal/administration/assets/index-TLC9UCl8.js",
         "/bundles/swagpaypal/administration/assets/index-BsFzNe0C.js",
         "/bundles/swagpaypal/administration/assets/index-DT6hpUCH.js",
         "/bundles/swagpaypal/administration/assets/index-NSbpapJx.js",
@@ -21,16 +21,16 @@
         "/bundles/swagpaypal/administration/assets/index-QD0Oy9I0.js",
         "/bundles/swagpaypal/administration/assets/index-COETuq5G.js",
         "/bundles/swagpaypal/administration/assets/index-CsBAAWMw.js",
-        "/bundles/swagpaypal/administration/assets/index-BCZeh6ai.js",
+        "/bundles/swagpaypal/administration/assets/index-gtYw8Qsm.js",
         "/bundles/swagpaypal/administration/assets/index-CjRcIrtF.js",
-        "/bundles/swagpaypal/administration/assets/index-CzUkyfh1.js",
-        "/bundles/swagpaypal/administration/assets/index-CTAXISfe.js",
-        "/bundles/swagpaypal/administration/assets/index-B6HE4bLc.js",
-        "/bundles/swagpaypal/administration/assets/index-B_pWpqqy.js",
+        "/bundles/swagpaypal/administration/assets/index-DZ1Vq9QG.js",
+        "/bundles/swagpaypal/administration/assets/index-CgMppzwP.js",
+        "/bundles/swagpaypal/administration/assets/index-BHqm_aTg.js",
+        "/bundles/swagpaypal/administration/assets/index-VpoqYJ4-.js",
         "/bundles/swagpaypal/administration/assets/index-CnMEVSY-.js"
       ],
       "js": [
-        "/bundles/swagpaypal/administration/assets/swag-pay-pal-BxgVI1dx.js"
+        "/bundles/swagpaypal/administration/assets/swag-pay-pal-y354h4RS.js"
       ],
       "legacy": false,
       "preload": []

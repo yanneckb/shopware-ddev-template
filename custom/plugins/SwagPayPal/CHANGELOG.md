@@ -1,3 +1,26 @@
+# 10.6.0
+- Added setting to disable the shipping callback for express checkouts.
+- Fixes an issue, where the shipping callback required the store-api to be exposed.
+- Fixes an issue, where PayPal webhooks with a `custom_id` payload that does not contain an `orderTransactionId` could trigger an undefined array key warning
+- Fixes an issue, where PayPal order creation and express checkout flows did not use the taxed cart with tax provider processing
+- Fixes an issue, where the OpenAPI schema could not be generated
+- Fixes an issue, where the cart was not correctly detected as free, resulting in errors during the PayPal checkout (shopware/SwagPayPal#591)
+- Fixes an issue, where the Zettle connection was only working for a few hours (shopware/SwagPayPal#594)
+
+# 10.5.0
+- Added Austria to the countries where Pay Later is available
+
+# 10.4.4
+- Fixes an issue, where refunds where possible as order editor, whereas order refund editor should be prefered (shopware/SwagPayPal#556)
+
+# 10.4.3
+- Fixes an issue, where causes for validation errors were not logged correctly
+
+# 10.4.2
+- Fixes an issue, where if an order was edited in the Administration, the payment amount could differ from the newly calculated total
+- Fixes an issue, where accessing an uninitialized object during express checkout (shopware/SwagPayPal#512)
+- Fixes an issue, where the HTTP cache was unnecessarily disturbed by creating a session (shopware/SwagPayPal#529)
+
 # 10.4.1
 - Fixes an issue, where required cookies were not displayed in the banner even though PayPal scripts had been loaded (shopware/SwagPayPal#506)
 

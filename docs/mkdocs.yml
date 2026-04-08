@@ -1,0 +1,127 @@
+# MkDocs Material — docs for Shopware DDEV template
+# https://squidfunk.github.io/mkdocs-material/setup/
+
+site_name: Shopware DDEV — docs
+site_description: Internal guides for local Shopware 6.7 development with DDEV.
+
+theme:
+  name: material
+  language: en
+  # Modern type pairing (loaded via Google Fonts by Material)
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: material/book-open-variant
+  palette:
+    # Light (default)
+    - scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark — slate background, strong contrast for code blocks
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    # Navigation
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.expand
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    # Content
+    - content.code.copy
+    - content.code.select
+    - content.tooltips
+    - search.suggest
+    - search.highlight
+    - search.share
+
+plugins:
+  - search:
+      lang: en
+
+extra:
+  generator: false
+
+dev_addr: '0.0.0.0:8000'
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - codehilite:
+      linenums: true
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      linenums: true
+      extend_pygments_lang:
+        - name: php
+          lang: php
+          options:
+            startinline: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - toc:
+      permalink: true
+      baselevel: 1
+
+nav:
+  - Home: index.md
+  - DDEV:
+      - Setup: ddev/ddev-setup.md
+      - Deep dive: ddev/ddev-deep-dive.md
+      - Add-ons: ddev/ddev-add-ons.md
+#   - Architecture:
+#     - Content types:
+#       - Home: architecture/content-types/content-types.md
+#       - Article: architecture/content-types/article.md
+#   - Infrastructure:
+#     - Local: infrastructure/local.md
+#     - Environments: infrastructure/environments.md
+#     - Solr: infrastructure/solr.md
+#   - Features:
+#     - Search: features/search.md
+#     - API: features/api.md
+#   - Procedures:
+#     - Updates: procedures/updates.md
+#     - Deployment: procedures/deployment.md
+#   - Others:
+#     - Glossary: others/glossary.md
+#     - FAQ: others/faq.md

@@ -1,0 +1,5 @@
+
+{
+    "extends": "../tsconfig.json",
+    "include": ["../custom/static-plugins/**/src/Resources/app/**/*.ts"]
+}

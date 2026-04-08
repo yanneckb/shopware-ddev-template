@@ -36,7 +36,7 @@ class TokenResource
 
     public function getToken(OAuthCredentials $credentials): Token
     {
-        $cacheId = Hasher::hash(\serialize($credentials));
+        $cacheId = Hasher::hash($credentials->getApiKey());
         $token = $this->getTokenFromCache($cacheId);
         if ($token === null || !$this->isTokenValid($token)) {
             $tokenClient = $this->tokenClientFactory->createTokenClient();
@@ -61,18 +61,40 @@ class TokenResource
 
     private function getTokenFromCache(string $cacheId): ?Token
     {
-        $token = $this->cache->getItem(self::CACHE_ID . $cacheId)->get();
-        if ($token === null) {
+        $raw = $this->cache->getItem(self::CACHE_ID . $cacheId)->get();
+
+        if (!\is_string($raw) || $raw === '') {
             return null;
         }
 
-        return \unserialize($token, ['allowed_classes' => [Token::class, \DateTime::class]]);
+        $data = \json_decode($raw, true);
+
+        return \is_array($data) ? $this->hydrateToken($data) : null;
+    }
+
+    private function hydrateToken(array $data): Token
+    {
+        $expireDateTime = $data['expireDateTime'] ?? null;
+        unset($data['expireDateTime']);
+
+        $token = (new Token())->assign($data);
+
+        if (\is_string($expireDateTime)) {
+            $token->setExpireDateTime(new \DateTime($expireDateTime));
+        }
+
+        return $token;
     }
 
     private function setToken(Token $token, string $cacheId): void
     {
         $item = $this->cache->getItem(self::CACHE_ID . $cacheId);
-        $item->set(\serialize($token));
+
+        $item->set(\json_encode([
+            ...$token->jsonSerialize(),
+            'expireDateTime' => $token->getExpireDateTime()->format(\DateTimeInterface::ATOM),
+        ]));
+
         $this->cache->save($item);
     }
 

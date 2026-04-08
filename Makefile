@@ -20,9 +20,9 @@ dbConfig=mysql:8.0
 nodejs=22
 
 ### Project config ###
-plugins=[plugins]
-theme=[theme]
-database=[database.sql.gz]
+plugins=FroshDevelopmentHelper FroshPlatformFilterSearch FroshPlatformShareBasket FroshPlatformTemplateMail FroshPlatformThumbnailProcessor FroshTools Shopware6DefaultTheme SwagPlatformDemoData
+theme=Shopware6DefaultTheme
+database=dump.sql.gz
 
 ### DDEV commands ###
 ddev-cache:
@@ -87,7 +87,7 @@ ddev-setup:
 ### Database commands ###
 # Export database
 ddev-export-db:
-    ddev export-db --file=./.devOps/db/dump.sql.gz
+	ddev export-db --file=./.devOps/db/dump.sql.gz
 
 # Import database
 ddev-import-db:
@@ -101,3 +101,9 @@ ddev-import-db:
 ### Cursor commands ###
 check-context7:
 	@(cd "$(dir $(abspath $(firstword $(MAKEFILE_LIST))))" && bash .cursor/run-context7-mcp.sh --check)
+
+### Documentation (MkDocs) ###
+# Run locally for live reload while editing. Requires: pip install mkdocs-material
+# Open http://127.0.0.1:8000 — no ddev restart needed.
+docs-serve:
+	cd docs && mkdocs serve

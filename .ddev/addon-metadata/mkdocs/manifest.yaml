@@ -1,0 +1,10 @@
+name: mkdocs
+repository: Metadrop/ddev-mkdocs
+version: v3.1.0
+install_date: "2026-04-08T11:27:36+02:00"
+project_files:
+    - docker-compose.mkdocs.yaml
+    - docs
+    - commands
+global_files: []
+removal_actions: []

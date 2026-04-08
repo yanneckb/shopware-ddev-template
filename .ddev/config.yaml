@@ -1,4 +1,4 @@
-name: ddev-shopware-6-7-base
+name: ddev-shopware-6-7-template
 type: shopware6
 docroot: public
 php_version: "8.4"

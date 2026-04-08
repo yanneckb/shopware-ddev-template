@@ -1,46 +1,9 @@
+
 {
-    "name": "shopware6-default-theme",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-      "pre-commit": "npx lint-staged",
-      "lint": "prettier --config prettier.config.js ./src/Resources/app --check && eslint --config eslint.config.js ./src/Resources/app && stylelint --config stylelint.config.js ./src/Resources/app",
-      "lint-fix": "prettier --config prettier.config.js --ignore-path .gitignore ./src/Resources/app --write && eslint --config eslint.config.js ./src/Resources/app --fix && stylelint --config stylelint.config.js ./src/Resources/app --fix"
-    },
-    "author": "",
-    "license": "ISC",
-    "description": "",
-    "devDependencies": {
-      "@babel/eslint-parser": "^7.19.1",
-      "@stylelint/postcss-css-in-js": "^0.38.0",
-      "@typescript-eslint/eslint-plugin": "^8.17.0",
-      "@typescript-eslint/parser": "^8.17.0",
-      "eslint": "^8.57.1",
-      "eslint-config-airbnb": "^19.0.4",
-      "eslint-config-airbnb-base": "^15.0.0",
-      "eslint-config-node": "^4.1.0",
-      "eslint-config-prettier": "^8.5.0",
-      "eslint-plugin-import": "^2.26.0",
-      "eslint-plugin-inclusive-language": "^2.2.1",
-      "eslint-plugin-node": "^11.1.0",
-      "eslint-plugin-prettier": "^4.2.1",
-      "eslint-plugin-promise": "^6.6.0",
-      "eslint-plugin-vue": "^9.5.1",
-      "hasown": "^2.0.1",
-      "lint-staged": "^13.0.3",
-      "postcss": "^8.4.16",
-      "postcss-html": "^1.5.0",
-      "postcss-reporter": "^7.0.5",
-      "postcss-scss": "^4.0.5",
-      "postcss-styled": "^0.34.0",
-      "postcss-syntax": "^0.36.2",
-      "prettier": "^2.7.1",
-      "stylelint": "^14.13.0",
-      "stylelint-config-prettier": "^9.0.3",
-      "stylelint-config-recommended": "^9.0.0",
-      "stylelint-config-standard-scss": "^5.0.0",
-      "stylelint-order": "^6.0.4",
-      "stylelint-scss": "^4.3.0"
-    }
-  }
-  
+  "name": "shopware6-default-theme",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "license": "ISC"
+}

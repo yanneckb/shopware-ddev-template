@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9280b330284e7a39f32d1909dff96f87",
+    "content-hash": "35fc64aef87b57c1a04c08ed6424f1bb",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6340,16 +6340,16 @@
         },
         {
             "name": "shopware/paypal-sdk",
-            "version": "v1.6.1",
+            "version": "v1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shopware/paypal-sdk.git",
-                "reference": "66848d409aeacd8a2ac008da5f45c335a3135e29"
+                "reference": "b426d84be427f89a948a4522630e39dbaa297d1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shopware/paypal-sdk/zipball/66848d409aeacd8a2ac008da5f45c335a3135e29",
-                "reference": "66848d409aeacd8a2ac008da5f45c335a3135e29",
+                "url": "https://api.github.com/repos/shopware/paypal-sdk/zipball/b426d84be427f89a948a4522630e39dbaa297d1a",
+                "reference": "b426d84be427f89a948a4522630e39dbaa297d1a",
                 "shasum": ""
             },
             "require": {
@@ -6403,9 +6403,9 @@
             "description": "SDK to communicate with the PayPal API",
             "support": {
                 "issues": "https://github.com/shopware/paypal-sdk/issues",
-                "source": "https://github.com/shopware/paypal-sdk/tree/v1.6.1"
+                "source": "https://github.com/shopware/paypal-sdk/tree/v1.6.3"
             },
-            "time": "2025-12-04T17:42:37+00:00"
+            "time": "2026-03-31T13:52:23+00:00"
         },
         {
             "name": "shopware/storefront",
@@ -6648,15 +6648,15 @@
         },
         {
             "name": "swag/paypal",
-            "version": "10.4.1",
+            "version": "10.6.0",
             "dist": {
                 "type": "path",
                 "url": "custom/plugins/SwagPayPal",
-                "reference": "72ce28d4b7c71c31ad734a65437fbf13e984254f"
+                "reference": "987b57e3b7108afe74568b38614f2f872995eaed"
             },
             "require": {
                 "shopware/core": "~6.7.0@dev",
-                "shopware/paypal-sdk": "^1.5.1"
+                "shopware/paypal-sdk": "^1.6.3"
             },
             "suggest": {
                 "shopware/administration": "Require '*'. Allows you to to set up the plugin easily",
@@ -6729,7 +6729,7 @@
                     "@lint:storefront:ci --fix"
                 ],
                 "lint:storefront:ci": [
-                    "cd src/Resources/app/storefront && ../../../../../../../src/Storefront/Resources/app/storefront/node_modules/.bin/eslint --config ../../../../../../../src/Storefront/Resources/app/storefront/.eslintrc.js ./src",
+                    "cd src/Resources/app/storefront && if [ -f ../../../../../../../src/Storefront/Resources/app/storefront/eslint.config.js ]; then ../../../../../../../src/Storefront/Resources/app/storefront/node_modules/.bin/eslint --config ../../../../../../../src/Storefront/Resources/app/storefront/eslint.config.js ./src; else ../../../../../../../src/Storefront/Resources/app/storefront/node_modules/.bin/eslint --config ../../../../../../../src/Storefront/Resources/app/storefront/.eslintrc.js ./src; fi",
                     "cd src/Resources/app/storefront && ../../../../../../../src/Storefront/Resources/app/storefront/node_modules/.bin/stylelint --config ../../../../../../../src/Storefront/Resources/app/storefront/stylelint.config.js ./src/scss"
                 ],
                 "phpunit": [
@@ -12085,6 +12085,96 @@
                 "source": "https://github.com/FriendsOfShopware/FroshDevelopmentHelper/tree/3.0.0"
             },
             "time": "2025-04-20T17:08:40+00:00"
+        },
+        {
+            "name": "symfony/web-profiler-bundle",
+            "version": "v7.4.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/web-profiler-bundle.git",
+                "reference": "79f039096c67cc1cc3f607d2ba72af86cd27e6a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/79f039096c67cc1cc3f607d2ba72af86cd27e6a4",
+                "reference": "79f039096c67cc1cc3f607d2ba72af86cd27e6a4",
+                "shasum": ""
+            },
+            "require": {
+                "composer-runtime-api": ">=2.1",
+                "php": ">=8.2",
+                "symfony/config": "^7.3|^8.0",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/framework-bundle": "^6.4.13|^7.1.6|^8.0",
+                "symfony/http-kernel": "^6.4.13|^7.1.6|^8.0",
+                "symfony/routing": "^6.4|^7.0|^8.0",
+                "symfony/twig-bundle": "^6.4|^7.0|^8.0",
+                "twig/twig": "^3.15"
+            },
+            "conflict": {
+                "symfony/form": "<6.4",
+                "symfony/mailer": "<6.4",
+                "symfony/messenger": "<6.4",
+                "symfony/serializer": "<7.2",
+                "symfony/workflow": "<7.3"
+            },
+            "require-dev": {
+                "symfony/browser-kit": "^6.4|^7.0|^8.0",
+                "symfony/console": "^6.4|^7.0|^8.0",
+                "symfony/css-selector": "^6.4|^7.0|^8.0",
+                "symfony/runtime": "^6.4.13|^7.1.6|^8.0",
+                "symfony/stopwatch": "^6.4|^7.0|^8.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\WebProfilerBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides a development tool that gives detailed information about the execution of any request",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "dev"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/web-profiler-bundle/tree/v7.4.8"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-03-24T13:12:05+00:00"
         }
     ],
     "aliases": [],
@@ -12093,6 +12183,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
+        "php": "^8.4",
         "composer-runtime-api": "^2.0"
     },
     "platform-dev": {},

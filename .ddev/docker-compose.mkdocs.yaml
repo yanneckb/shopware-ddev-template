@@ -1,0 +1,26 @@
+#ddev-generated
+services:
+  mkdocs:
+    container_name: "ddev-${DDEV_SITENAME}-mkdocs"
+    image: squidfunk/mkdocs-material:latest
+    environment:
+      - VIRTUAL_HOST=$DDEV_HOSTNAME
+      - HTTP_EXPOSE=9004:8000
+      - HTTPS_EXPOSE=9005:8000
+    volumes:
+      - $DDEV_APPROOT/docs:/docs
+      - .:/mnt/ddev_config:ro
+      - ddev-global-cache:/mnt/ddev-global-cache
+    user:  '$DDEV_UID:$DDEV_GID'
+    working_dir: /docs
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    networks:
+      ddev_default: null
+      default: null
+    expose:
+      - "8000"
+  web:
+   links:
+     - mkdocs:mkdocs
